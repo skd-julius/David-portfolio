@@ -1,72 +1,100 @@
-/* SAFARI-FIXED HERO ------------------------------------------------------ */
+/* ------------------------------------------------------------------
+   THEME TOKENS (no gradients here – Safari-safe)
+------------------------------------------------------------------- */
 
-.hero {
-    min-height: 100vh;
-    padding-top: 90px;
+:root {
+    --bg: #050816;
+    --fg: #f5f5f7;
+    --card-bg: rgba(12, 12, 25, 0.8);
+    --card-border: rgba(255, 255, 255, 0.15);
+    --shadow: rgba(0, 0, 0, 0.6);
+    --accent: #4ea8ff;
+    --accent-soft: rgba(78, 168, 255, 0.3);
+}
+
+[data-theme="light"] {
+    --bg: #f5f5f7;
+    --fg: #111111;
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-border: rgba(0, 0, 0, 0.08);
+    --shadow: rgba(0, 0, 0, 0.1);
+    --accent: #0071e3;
+    --accent-soft: rgba(0, 113, 227, 0.15);
+}
+
+/* ------------------------------------------------------------------
+   GLOBAL
+------------------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    transition: background 0.6s ease, color 0.4s ease;
+}
+
+/* Safari compositing nudge */
+.safari-mask {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    background: rgba(0,0,0,0.01);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------
+   NAV
+------------------------------------------------------------------- */
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 40px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-
-    /* Move radial gradients HERE (Safari hates them in :root) */
-    background: radial-gradient(circle at 20% 20%, #0b1e3f, transparent 60%),
-                radial-gradient(circle at 80% 60%, #1a2f3f, transparent 60%),
-                #000;
+    justify-content: space-between;
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    background: rgba(5, 5, 10, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 100;
 }
 
-/* Orbs */
-
-.orb {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(30px);
-    -webkit-filter: blur(30px); /* Safari */
-    opacity: 0.55;
-    will-change: transform;
-    z-index: 0;
+[data-theme="light"] .nav {
+    background: rgba(255, 255, 255, 0.75);
+    border-bottom-color: rgba(0, 0, 0, 0.06);
 }
 
-/* Reduce blur (Safari bug workaround) */
-.orb-1 { width: 350px; height: 350px; background: #4ea8ff55; top: 5%; left: 5%; }
-.orb-2 { width: 280px; height: 280px; background: #ff7ee555; bottom: 5%; right: 10%; }
-.orb-3 { width: 220px; height: 220px; background: #7cf4ff55; top: 40%; left: 60%; }
-
-/* Vision Pro Card */
-
-.vision-card {
-    perspective: 1200px;
-    transform-style: preserve-3d;
-    will-change: transform;
-    transition: transform 0.3s ease-out;
-    z-index: 10;
+.nav-logo {
+    font-size: 18px;
+    font-weight: 600;
 }
 
-/* SAFARI-SAFE BORDER */
-.vision-frame {
-    width: min(580px, 90vw);
-    border-radius: 32px;
-    padding: 2px;
-
-    /* Remove conic-gradient border (Safari hates this) */
-    background: rgba(255,255,255,0.10);
-
-    /* Add a glowing outline instead */
-    box-shadow:
-        0 0 22px rgba(78,168,255,0.35),
-        0 0 38px rgba(255,126,229,0.25),
-        0 0 60px rgba(124,244,255,0.20);
-}
-
-/* SAFARI GLASS FIX */
-.vision-screen {
-    border-radius: 28px;
-    padding: 32px;
-    background: rgba(0,0,0,0.68);
-    color: white;
-
-    -webkit-backdrop-filter: saturate(180%) blur(18px); /* Safari require */
-    backdrop-filter: saturate(180%) blur(18px);
-
-    border: 1px solid rgba(255,255,255,0.15);
+.nav-links {
+    display: flex;
+    gap: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
 }
