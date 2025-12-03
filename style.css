@@ -1,93 +1,157 @@
+/* GLOBAL THEME --------------------------------------------------- */
+
+:root {
+    --bg: #ffffff;
+    --fg: #111111;
+    --card-bg: rgba(255, 255, 255, 0.55);
+    --card-border: rgba(255, 255, 255, 0.3);
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+    --bg: #000000;
+    --fg: #ffffff;
+    --card-bg: rgba(30, 30, 30, 0.45);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --shadow: rgba(0, 0, 0, 0.7);
+}
+
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro", "Helvetica Neue", Arial;
-    background: #f7f7f7;
-    color: #222;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue";
+    background: var(--bg);
+    color: var(--fg);
+    transition: background 0.4s ease, color 0.4s ease;
 }
+
+/* HERO ----------------------------------------------------------- */
 
 .hero {
-    background: linear-gradient(120deg, #000, #444);
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.cta-btn {
-    background: gold;
-    padding: 12px 30px;
-    border-radius: 8px;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav {
-    background: white;
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-nav ul {
+    height: 100vh;
+    background: url("https://www.apple.com/v/home/ay/images/heroes/macbook-air-m3/hero_endframe__ea0qze85eyi6_large.jpg") center/cover no-repeat;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    color: white;
 }
 
-nav a {
-    text-decoration: none;
-    font-weight: 600;
-    color: #333;
+.hero-content {
+    backdrop-filter: blur(12px) brightness(0.7);
+    padding: 40px 60px;
+    border-radius: 24px;
 }
+
+.hero-title {
+    font-size: 54px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    opacity: 0.9;
+    margin: 12px 0 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.primary {
+    background: white;
+    color: black;
+    font-weight: 600;
+}
+
+.secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+/* NAV ------------------------------------------------------------ */
+
+.nav {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--card-border);
+    z-index: 50;
+}
+
+.nav-logo {
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--fg);
+    font-weight: 500;
+}
+
+/* SECTIONS ------------------------------------------------------- */
 
 .section {
-    max-width: 950px;
-    margin: 60px auto;
-    padding: 0 20px;
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 30px;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 32px;
 }
 
-.card h3 {
-    margin-top: 0;
+/* GLASS CARDS ---------------------------------------------------- */
+
+.glass-card {
+    background: var(--card-bg);
+    padding: 28px 32px;
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 8px 20px var(--shadow);
+    backdrop-filter: blur(16px);
+    margin-bottom: 40px;
 }
 
-.date {
-    font-size: 14px;
-    color: #666;
-}
+/* SKILLS GRID ---------------------------------------------------- */
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
 }
 
 .skills-grid span {
-    background: white;
-    padding: 10px;
-    border-radius: 6px;
+    background: var(--card-bg);
+    padding: 14px;
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(8px);
 }
+
+/* FOOTER --------------------------------------------------------- */
 
 footer {
     text-align: center;
-    padding: 25px;
-    margin-top: 60px;
-    background: #111;
-    color: #aaa;
+    padding: 40px;
+    font-size: 14px;
+    opacity: 0.6;
 }
