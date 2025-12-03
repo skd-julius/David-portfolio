@@ -3,127 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David S. Julius | Staff iOS Engineer</title>
+    <title>David S. Julius — Staff iOS & macOS Engineer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="hero">
-    <h1>David S. Julius</h1>
-    <h3>Staff iOS, macOS, watchOS, Vision Pro Engineer</h3>
-    <p>Cupertino, California • <a href="mailto:daveyjulius125@gmail.com">daveyjulius125@gmail.com</a> • 408-529-3296</p>
-    <a href="#contact" class="cta-btn">Contact Me</a>
+<header class="hero" id="home">
+    <div class="hero-content">
+        <h1 class="hero-title">David S. Julius</h1>
+        <h2 class="hero-subtitle">Staff Software Engineer</h2>
+        <p class="hero-text">Crafting world-class Apple-quality experiences</p>
+        <div class="hero-buttons">
+            <a href="#experience" class="btn primary">Experience</a>
+            <a href="#contact" class="btn secondary">Contact</a>
+        </div>
+    </div>
 </header>
 
-<nav id="navbar">
-    <ul>
+<nav class="nav">
+    <div class="nav-left">
+        <span class="nav-logo"> Portfolio</span>
+    </div>
+    <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <div class="theme-toggle">
+        <span id="themeIcon">☀️</span>
+    </div>
 </nav>
 
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <p>
-        Senior Staff Software Engineer with 10+ years of experience building high-scale iOS, macOS, watchOS, and Vision Pro applications 
-        for Apple. Expert in Swift, SwiftUI, Objective-C, XCTest, XCUITest, modular architectures, and Generative AI integrations.
-        Specialized in performance tuning, concurrency, memory management, CI/CD automation, and building world-class Apple-quality products.
-    </p>
+<section class="section" id="about">
+    <h2 class="section-title">About</h2>
+    <div class="glass-card">
+        <p>
+            Senior Staff Software Engineer with 10+ years delivering Apple-grade software across iOS, macOS, 
+            watchOS and Vision Pro. Expert in Swift, SwiftUI, Objective-C, XCTest, architecture, performance 
+            tuning, memory management, CoreData, concurrency, XPC and CI/CD automation. Experienced in 
+            Generative AI integrations and building intelligent user interfaces across Apple's ecosystem.
+        </p>
+    </div>
 </section>
 
-<section id="experience" class="section">
-    <h2>Professional Experience</h2>
+<section class="section" id="experience">
+    <h2 class="section-title">Experience</h2>
 
-    <div class="card">
-        <h3>Senior Software Engineer – iOS / macOS / watchOS / Vision Pro • Apple (via TCS)</h3>
-        <span class="date">May 2021 – Present</span>
+    <div class="glass-card">
+        <h3>Senior Software Engineer — Apple (via TCS)</h3>
+        <p class="date">2021 — Present</p>
         <ul>
-            <li>Built advanced SwiftUI interfaces, improving maintainability by 25% and rewriting key frameworks.</li>
-            <li>Developed shared cross-platform UIKit/AppKit components following Human Interface Guidelines.</li>
-            <li>Created Generative AI-powered UI features integrating ML APIs for predictions and automation.</li>
-            <li>Built analytics dashboards using Swift Charts for Radar engineering insights.</li>
-            <li>Developed a network abstraction layer with URLSession + Combine reducing latency by 18%.</li>
-            <li>Architected CoreData caching improving data retrieval speed by 40%.</li>
-            <li>Created system-level XPC daemons and background services for signing/MDM workflows.</li>
-            <li>Automated CI pipelines in Jenkins with Python and shell scripts.</li>
+            <li>Engineered advanced SwiftUI UIs improving maintainability by 25%.</li>
+            <li>Developed AI-powered UI flows using ML APIs for predictions.</li>
+            <li>Architected CoreData layer with 40% faster data retrieval.</li>
+            <li>Developed XPC daemons for signing & MDM workflows.</li>
+            <li>Built Radar analytics dashboards using Swift Charts.</li>
+            <li>Automated CI/CD pipelines using Jenkins, Python & shell.</li>
         </ul>
     </div>
 
-    <div class="card">
-        <h3>Technical Lead – iOS / macOS • Apple (via Quest Global)</h3>
-        <span class="date">Oct 2018 – Apr 2021</span>
+    <div class="glass-card">
+        <h3>Technical Lead — Apple (via Quest Global)</h3>
+        <p class="date">2018 — 2021</p>
         <ul>
-            <li>Led end-to-end design of Apple internal apps improving system efficiency by 20%.</li>
-            <li>Implemented Swift concurrency, Core ML–based suggestions, and modular architectures.</li>
-            <li>Improved API reliability via smart caching, throttling, and retry logic.</li>
-            <li>Enhanced CoreData systems and optimized background workflows.</li>
+            <li>Led iOS/macOS architecture modernization improving system efficiency 20%.</li>
+            <li>Built intelligent suggestions using Core ML and custom inference APIs.</li>
+            <li>Optimized performance using Instruments, Memory Graph, Time Profiler.</li>
+            <li>Introduced modern Swift concurrency across service layers.</li>
         </ul>
     </div>
 
-    <div class="card">
-        <h3>Software Engineer – Mobile Applications • Quest Global</h3>
-        <span class="date">Jun 2015 – Sep 2018</span>
+    <div class="glass-card">
+        <h3>Software Engineer — Quest Global</h3>
+        <p class="date">2015 — 2018</p>
         <ul>
-            <li>Developed high-throughput file compression frameworks for macOS/iOS.</li>
-            <li>Integrated HTML5 rendering into native UIKit/AppKit experiences.</li>
-            <li>Accelerated migration from Objective-C to Swift.</li>
+            <li>Developed file compression frameworks for terabyte-scale processing.</li>
+            <li>Migrated major modules from Objective-C to Swift.</li>
+            <li>Integrated HTML5 rendering into native UI frameworks.</li>
         </ul>
     </div>
 
-    <div class="card">
-        <h3>System Analyst – iOS/iPadOS/macOS • Exilant Technologies</h3>
-        <span class="date">May 2011 – Jun 2015</span>
+    <div class="glass-card">
+        <h3>iOS/macOS Developer — Exilant Technologies</h3>
+        <p class="date">2011 — 2015</p>
         <ul>
-            <li>Redesigned product architecture reducing time-to-market by 30%.</li>
-            <li>Built secure, performant data fetch pipelines with GCD.</li>
-            <li>Led full UI redesigns aligned with internal UX guidelines.</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>Multimedia Programmer / Web Developer • Tarang Technologies</h3>
-        <span class="date">Sep 2010 – May 2011</span>
-        <ul>
-            <li>Created engaging web interfaces using HTML, CSS, JavaScript.</li>
-            <li>Integrated rich multimedia and dynamic features to increase engagement.</li>
+            <li>Revamped product workflow reducing time-to-market by 30%.</li>
+            <li>Built performant background data pipelines using GCD.</li>
         </ul>
     </div>
 </section>
 
-<section id="skills" class="section">
-    <h2>Core Skills</h2>
+<section class="section" id="skills">
+    <h2 class="section-title">Core Skills</h2>
+
     <div class="skills-grid">
-        <span>Swift</span><span>SwiftUI</span><span>Objective-C</span><span>XCTest</span><span>XCUITest</span>
-        <span>UIKit</span><span>AppKit</span><span>CoreData</span><span>Concurrency</span>
-        <span>Combine</span><span>CI/CD</span><span>Jenkins</span><span>AI Integration</span>
-        <span>Instruments</span><span>Profiling</span><span>API Design</span><span>Security</span>
+        <span>Swift</span><span>SwiftUI</span><span>UIKit</span><span>AppKit</span>
+        <span>Objective-C</span><span>XCTest</span><span>XCUITest</span><span>Concurrency</span>
+        <span>Combine</span><span>Core Data</span><span>AI Integration</span><span>Security</span>
+        <span>CI/CD</span><span>Jenkins</span><span>Profiling</span><span>URLSession</span>
     </div>
 </section>
 
-<section id="projects" class="section">
-    <h2>Highlighted Projects</h2>
-    <p>Coming soon – Your internal Apple projects can be summarized only at a high level.</p>
+<section class="section" id="education">
+    <h2 class="section-title">Education</h2>
+    <div class="glass-card">
+        <p><strong>Bachelor of Engineering — Computer Science</strong><br>
+        Visvesvaraya Technological University</p>
+    </div>
 </section>
 
-<section id="education" class="section">
-    <h2>Education</h2>
-    <p><strong>Bachelor of Engineering – Computer Science</strong><br>
-       Visvesvaraya Technological University</p>
-</section>
-
-<section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:daveyjulius125@gmail.com">daveyjulius125@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/skd-julius" target="_blank">github.com/skd-julius</a></p>
-    <p>LinkedIn (optional): Add a link</p>
+<section class="section" id="contact">
+    <h2 class="section-title">Contact</h2>
+    <div class="glass-card">
+        <p>Email: <a href="mailto:daveyjulius125@gmail.com">daveyjulius125@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/skd-julius" target="_blank">github.com/skd-julius</a></p>
+        <p>Phone: 408-529-3296</p>
+    </div>
 </section>
 
 <footer>
-    <p>© 2025 David S. Julius — Portfolio v1.0</p>
+    <p>© 2025 · Designed in an Apple-inspired style · David S. Julius</p>
 </footer>
 
 <script src="script.js"></script>
