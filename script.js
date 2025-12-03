@@ -14,7 +14,7 @@ themeIcon.addEventListener("click", () => {
 });
 
 // Load saved theme
-const savedTheme = localStorage.getItem("theme") || "light";
+const savedTheme = localStorage.getItem("theme") || "dark";
 setTheme(savedTheme);
 
 // Smooth scrolling
