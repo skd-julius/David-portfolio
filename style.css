@@ -364,6 +364,46 @@ main {
     -webkit-backdrop-filter: blur(16px);
 }
 
+/* ================================
+   PORTFOLIO
+=================================== */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 26px;
+}
+
+.portfolio-card {
+    padding: 22px;
+}
+
+.portfolio-sub {
+    opacity: 0.85;
+    margin-bottom: 14px;
+    line-height: 1.45;
+}
+
+.portfolio-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.portfolio-tags span {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 4px 6px 0 0;
+    border-radius: 999px;
+    font-size: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(16px);
+}
+
+
 /* ------------------------------------------------------------------
    CONTACT
 ------------------------------------------------------------------- */
