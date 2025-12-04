@@ -516,21 +516,51 @@ footer {
   align-items: center;
 }
 
-.switch {
+.theme-toggle {
   display: flex;
   align-items: center;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 30px;
-  width: 140px;
-  height: 32px;
-  padding: 4px;
-  cursor: pointer;
-  user-select: none;
+  gap: 10px;
+}
+
+.switch-text {
+  font-size: 13px;
+  opacity: 0.8;
+  width: 85px;
+  text-align: right;
+}
+
+/* Capsule */
+.apple-switch {
+  width: 52px;
+  height: 28px;
+  background: #d1d1d6;
+  border-radius: 999px;
   position: relative;
-  transition: background 0.3s;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.25);
+}
+
+/* Knob */
+.apple-switch .switch-knob {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.28s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Light mode ON (switch right) */
+[data-theme="light"] .apple-switch {
+  background: #34c759; /* iOS green */
+}
+
+[data-theme="light"] .apple-switch .switch-knob {
+  transform: translateX(24px);
 }
 
 .switch-handle {
