@@ -27,12 +27,12 @@
     </ul>
 
     <div class="theme-toggle">
-      <button id="themeToggle" aria-label="Toggle theme">
-        <span id="themeIcon">🌙</span>
-      </button>
+      <div id="themeSwitch" class="switch">
+        <div class="switch-handle"></div>
+        <span class="switch-label" id="switchLabel">Dark Mode</span>
+      </div>
     </div>
   </nav>
-
 
   <!-- HERO SECTION -->
   <header class="hero" id="home">
@@ -84,7 +84,7 @@
     </section>
 
 
-    <!-- ⭐ PORTFOLIO SECTION -->
+    <!--  PORTFOLIO SECTION -->
     <section class="section reveal" id="portfolio">
       <h2 class="section-title">Portfolio</h2>
 
@@ -92,7 +92,7 @@
 
         <!-- Prism -->
         <div class="glass-card portfolio-card">
-          <h3>Prism — Global Retail CRM</h3>
+          <h3>Prism - Global Retail CRM</h3>
           <p class="portfolio-sub">
             Apple Retail’s worldwide customer-support CRM powering phone, chat, and task workflows.
           </p>
@@ -108,7 +108,7 @@
 
         <!-- Interact -->
         <div class="glass-card portfolio-card">
-          <h3>Interact — Engineering CRM</h3>
+          <h3>Interact - Engineering CRM</h3>
           <p class="portfolio-sub">
             Engineering-focused CRM for advanced diagnostics, workflows, and worldwide support escalations.
           </p>
@@ -118,13 +118,13 @@
             <div><strong>CRM</strong><br>ecosystem</div>
           </div>
           <div class="portfolio-tags">
-            <span>Swift</span> <span>Diagnostics</span> <span>Enterprise</span>
+            <span>Swift</span> <span>SwiftUI</span> <span>Diagnostics</span> <span>Enterprise</span>
           </div>
         </div>
 
         <!-- Hello -->
         <div class="glass-card portfolio-card">
-          <h3>Hello — Retail Knowledge Hub</h3>
+          <h3>Hello - Retail Knowledge Hub</h3>
           <p class="portfolio-sub">
             Fast, modern hub for announcements, tasks, reference data, and GenAI-powered quick answers.
           </p>
@@ -134,13 +134,13 @@
             <div><strong>Instant</strong><br>responses</div>
           </div>
           <div class="portfolio-tags">
-            <span>SwiftUI</span> <span>GenAI</span> <span>Enterprise</span>
+            <span>SwiftUI</span> <span>SwiftUI</span> <span>GenAI</span> <span>Enterprise</span> <span>LLM</span> <span>ML api intergration</span>
           </div>
         </div>
 
         <!-- Radar -->
         <div class="glass-card portfolio-card">
-          <h3>Radar — Apple Engineering System</h3>
+          <h3>Radar - Apple Engineering System</h3>
           <p class="portfolio-sub">
             Apple’s premier system for bugs, planning, engineering workflows, dashboards, and test suites.
           </p>
@@ -172,7 +172,7 @@
 
         <!-- Sparkle -->
         <div class="glass-card portfolio-card">
-          <h3>Sparkle — macOS Auto-Update Framework</h3>
+          <h3>Sparkle - macOS Auto-Update Framework</h3>
           <p class="portfolio-sub">
             Automatic update framework powering secure, end-to-end macOS application release cycles.
           </p>
@@ -288,18 +288,108 @@
 
 
     <!-- SKILLS -->
-    <section class="section reveal" id="skills">
-      <h2 class="section-title">Core Skills</h2>
+<section class="section reveal" id="skills">
+  <h2 class="section-title">Core Skills</h2>
 
-      <div class="skills-grid">
-        <span>Swift</span><span>SwiftUI</span><span>UIKit</span><span>AppKit</span>
-        <span>Objective-C</span><span>XCTest</span><span>XCUITest</span><span>Combine</span>
-        <span>Concurrency</span><span>Core Data</span><span>REST</span><span>URLSession</span>
-        <span>AI & ML Integration</span><span>CI/CD · Jenkins</span>
-        <span>Profiling & Instruments</span><span>Security & Keychain</span>
-      </div>
-    </section>
+  <div class="skills-category-grid">
 
+    <!-- LANGUAGES & CORE -->
+    <div class="glass-card skill-card">
+      <h3 class="skill-title">LANGUAGES & CORE</h3>
+      <ul class="skill-list">
+        <li>Swift (13+ years)</li>
+        <li>Objective-C</li>
+        <li>SwiftUI & UIKit</li>
+        <li>Python</li>
+      </ul>
+    </div>
+
+    <!-- MACOS & SYSTEMS -->
+    <div class="glass-card skill-card">
+      <h3 class="skill-title">MACOS & SYSTEMS PROGRAMMING</h3>
+      <ul class="skill-list">
+        <li>AppKit & Cocoa</li>
+        <li>System Extensions & XPC</li>
+        <li>Grand Central Dispatch</li>
+        <li>File System & Security</li>
+        <li>Low-level Optimization</li>
+      </ul>
+    </div>
+
+    <!-- AI & ADVANCED -->
+    <div class="glass-card skill-card">
+      <h3 class="skill-title">AI/ML & ADVANCED</h3>
+      <ul class="skill-list">
+        <li>Core ML & Create ML</li>
+        <li>Natural Language Processing</li>
+        <li>Vision Framework</li>
+        <li>LLM Integration</li>
+        <li>Predictive Analytics</li>
+      </ul>
+    </div>
+
+    <!-- ARCHITECTURE -->
+    <div class="glass-card skill-card">
+      <h3 class="skill-title">ARCHITECTURE & DESIGN</h3>
+      <ul class="skill-list">
+        <li>MVVM, VIPER, Clean Architecture</li>
+        <li>Microservices</li>
+        <li>Modular Design</li>
+        <li>Design Patterns</li>
+        <li>System Design</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <!-- EXPANDABLE SECTION -->
+  <div id="moreSkills" class="skills-category-grid hidden">
+
+    <!-- CLOUD -->
+    <div class="glass-card skill-card">
+      <h3 class="skill-title">CLOUD & BACKEND</h3>
+      <ul class="skill-list">
+        <li>AWS (S3, Lambda, EC2)</li>
+        <li>Firebase & Firestore</li>
+        <li>REST APIs & GraphQL</li>
+        <li>WebSockets</li>
+        <li>Microservices Integration</li>
+      </ul>
+    </div>
+
+    <!-- DEVOPS -->
+    <div class="glass-card skill-card">
+      <h3 class="skill-title">DEVOPS & TOOLS</h3>
+      <ul class="skill-list">
+        <li>CI/CD (Jenkins, GitHub Actions)</li>
+        <li>Xcode Cloud</li>
+        <li>Git, JIRA, Confluence</li>
+        <li>TestFlight & App Store</li>
+        <li>Monitoring & Analytics</li>
+      </ul>
+    </div>
+
+    <!-- TESTING -->
+    <div class="glass-card skill-card">
+      <h3 class="skill-title">TESTING & QUALITY</h3>
+      <ul class="skill-list">
+        <li>XCTest & XCUITest</li>
+        <li>Unit Testing (TDD)</li>
+        <li>UI Automation</li>
+        <li>Performance Testing</li>
+        <li>Code Review & Mentoring</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- TOGGLE BUTTON -->
+  <div class="skills-toggle">
+    <button id="skillsToggleBtn" class="btn secondary">▲ Show More Skills</button>
+  </div>
+
+</section>
 
     <!-- EDUCATION -->
     <section class="section reveal" id="education">
