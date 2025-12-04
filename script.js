@@ -1,19 +1,21 @@
-/* -----------------------------------------------
-   THEME SWITCH (new slider)
------------------------------------------------ */
-const themeSwitch = document.getElementById("themeSwitch");
-const switchLabel = document.getElementById("switchLabel");
+/* -------------------------------------------
+   APPLE SWITCH LOGIC
+------------------------------------------- */
+const appleSwitch = document.getElementById("appleSwitch");
+const themeLabel = document.getElementById("themeLabel");
 
 function applyTheme(mode) {
   document.documentElement.setAttribute("data-theme", mode);
-  switchLabel.textContent = mode === "dark" ? "Dark Mode" : "Light Mode";
+  themeLabel.textContent = mode === "dark" ? "Dark Mode" : "Light Mode";
   localStorage.setItem("theme", mode);
 }
 
+// Load saved theme
 const savedTheme = localStorage.getItem("theme") || "dark";
 applyTheme(savedTheme);
 
-themeSwitch.addEventListener("click", () => {
+// Toggle logic
+appleSwitch.addEventListener("click", () => {
   const current = document.documentElement.getAttribute("data-theme");
   const next = current === "dark" ? "light" : "dark";
   applyTheme(next);
