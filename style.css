@@ -453,3 +453,114 @@ footer {
         padding: 26px 20px 28px;
     }
 }
+
+/* ================================
+   SKILLS SECTION
+=================================== */
+
+.skills-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-bottom: 22px;
+}
+
+.skill-card {
+  padding: 22px;
+}
+
+.skill-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.skill-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skill-list li {
+  margin: 8px 0;
+  padding-left: 18px;
+  position: relative;
+  font-size: 14px;
+}
+
+.skill-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.skills-toggle {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* =========================================
+   THEME SLIDER SWITCH
+========================================= */
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 30px;
+  width: 140px;
+  height: 32px;
+  padding: 4px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.switch-handle {
+  width: 26px;
+  height: 26px;
+  background: var(--fg);
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+.switch-label {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+  padding-left: 18px;
+  color: var(--fg);
+}
+
+/* Light mode handle shifts right */
+[data-theme="light"] .switch-handle {
+  transform: translateX(70px);
+}
+
+/* Optional better visuals */
+[data-theme="light"] .switch {
+  background: rgba(0,0,0,0.05);
+}
+
