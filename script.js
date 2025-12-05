@@ -21,24 +21,6 @@ appleSwitch.addEventListener("click", () => {
   applyTheme(next);
 });
 
-
-/* -----------------------------------------------
-   SKILLS SHOW/HIDE
------------------------------------------------ */
-const skillsBtn = document.getElementById("skillsToggleBtn");
-const moreSkills = document.getElementById("moreSkills");
-
-skillsBtn.addEventListener("click", () => {
-  if (moreSkills.classList.contains("hidden")) {
-    moreSkills.classList.remove("hidden");
-    skillsBtn.textContent = "▲ Show Fewer Skills";
-  } else {
-    moreSkills.classList.add("hidden");
-    skillsBtn.textContent = "▲ Show More Skills";
-  }
-});
-
-
 /* -----------------------------------------------
    REVEAL ON SCROLL
 ----------------------------------------------- */
